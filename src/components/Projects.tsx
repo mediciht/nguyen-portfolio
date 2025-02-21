@@ -4,9 +4,9 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Cloud Migration Framework",
-    description: "Developed a framework for seamless migration of legacy applications to cloud infrastructure.",
-    tech: ["AWS", "Terraform", "Docker"],
+    title: "Monitoring Solution",
+    description: "Deploy and Maintain monitoring service for large infra, cover IaaS, PaaS and SaaS.",
+    tech: ["Zabbix", "Datadog", "Grafana", "Terraform"],
     links: {
       github: "#",
       live: "#",
@@ -22,9 +22,9 @@ const projects = [
     },
   },
   {
-    title: "Monitoring Solution",
-    description: "Implemented comprehensive monitoring and alerting system.",
-    tech: ["Prometheus", "Grafana", "ELK Stack"],
+    title: "Cloud Migration Framework",
+    description: "Developed a framework for seamless migration of legacy applications to cloud infrastructure.",
+    tech: ["AWS", "Terraform", "Docker"],
     links: {
       github: "#",
       live: "#",
