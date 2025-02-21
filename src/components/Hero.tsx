@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
@@ -43,20 +43,44 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 flex items-center justify-center gap-x-6"
+          className="mt-10 flex items-center justify-center gap-4 flex-wrap"
         >
           <a
-            href="#contact"
-            className="rounded-lg px-6 py-3 text-sm font-semibold bg-accent-purple text-white shadow-sm hover:bg-accent-purple/90 transition-colors"
+            href="https://www.linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"
           >
-            Get in touch
+            <Linkedin className="h-4 w-4" />
+            LinkedIn
           </a>
+          
           <a
-            href="https://github.com"
-            className="flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"
+            href="https://github.com/mediciht"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             <Github className="h-4 w-4" />
-            View GitHub
+            GitHub
+          </a>
+
+          <a
+            href="https://www.upwork.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            <ExternalLink className="h-4 w-4" />
+            Upwork
+          </a>
+
+          <a
+            href="mailto:your.email@example.com"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold bg-accent-purple text-white shadow-sm hover:bg-accent-purple/90 transition-colors"
+          >
+            <Mail className="h-4 w-4" />
+            Contact Me
           </a>
         </motion.div>
       </div>
