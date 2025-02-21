@@ -1,6 +1,6 @@
-
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -10,7 +10,12 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="flex flex-col items-center gap-4"
         >
+          <Avatar className="h-24 w-24">
+            <AvatarImage src="/images/avatar.jpg" alt="Your Name" />
+            <AvatarFallback>YN</AvatarFallback>
+          </Avatar>
           <span className="px-3 py-1 text-sm font-medium bg-accent-purple/10 text-accent-purple rounded-full">
             DevOps Engineer
           </span>
@@ -31,7 +36,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto"
         >
-          Experienced Monitoring/DevOps professional specializing in IT reliability, monitoring solutions, infrastructure automation, and custom applications.
+          Hi, I'm Nguyen, a seasoned Monitoring/DevOps professional committed to optimizing IT system reliability and performance. With expertise in deploying and managing monitoring solutions, automating infrastructure configurations, and developing custom applications, I focus on creating efficient, reliable systems tailored to specific needs.
         </motion.p>
 
         <motion.div
