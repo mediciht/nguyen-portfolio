@@ -4,22 +4,22 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    company: "Tech Corp",
-    position: "Senior DevOps Engineer",
-    period: "2021 - Present",
-    description: "Leading cloud infrastructure and deployment automation initiatives.",
+    company: "Linkbynet/Accenture",
+    position: "DevOps Monitoring",
+    period: "01/2023 - Present",
+    description: "Design, develop and maintain automation tools/apps support operation monitoring and incident handling.",
   },
   {
-    company: "Innovation Labs",
-    position: "DevOps Engineer",
-    period: "2019 - 2021",
-    description: "Implemented CI/CD pipelines and containerization strategies.",
+    company: "Linkbynet",
+    position: "Monitoring Engineer",
+    period: "01/2022 - 12/2022",
+    description: "Deploy and maintain monitoring solution for large infra.",
   },
   {
-    company: "StartUp Inc",
-    position: "Systems Engineer",
-    period: "2017 - 2019",
-    description: "Managed cloud infrastructure and automated deployment processes.",
+    company: "TMA Solutions",
+    position: "QA Engineer",
+    period: "06/2019 - 12/2021",
+    description: "Build and develop automation test for SIP and android phone.",
   },
 ];
 

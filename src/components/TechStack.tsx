@@ -8,13 +8,17 @@ import {
   Database,
   LineChart,
   FileCode,
-  Settings
+  Settings,
+  Server,
+  MessageCircle,
+  Function
 } from "lucide-react";
 
 const technologies = [
   { 
     name: "AWS", 
     category: "Cloud",
+    details: "API Gateway, SQS, Lambda, EC2, S3, DynamoDB",
     icon: Cloud
   },
   {
