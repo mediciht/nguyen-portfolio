@@ -31,7 +31,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto"
         >
-          I am an experienced Monitoring/DevOps professional dedicated to ensuring IT system reliability and performance. I specialize in deploying and managing monitoring solutions, automating infrastructure configurations, developing and maintaining applications, and creating custom monitoring solutions.
+          Experienced Monitoring/DevOps professional specializing in IT reliability, monitoring solutions, infrastructure automation, and custom applications.
         </motion.p>
 
         <motion.div
