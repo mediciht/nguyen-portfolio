@@ -22,7 +22,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-6 text-4xl sm:text-5xl font-bold tracking-tight text-gray-900"
         >
-          Building & Scaling Modern Infrastructure
+          Monitoring & Automating Everything You Have
         </motion.h1>
         
         <motion.p
@@ -31,8 +31,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto"
         >
-          Passionate DevOps engineer specializing in cloud infrastructure, CI/CD automation, and scalable solutions. 
-          Transforming development workflows and optimizing deployment processes.
+          I am an experienced Monitoring/DevOps professional dedicated to ensuring IT system reliability and performance. I specialize in deploying and managing monitoring solutions, automating infrastructure configurations, developing and maintaining applications, and creating custom monitoring solutions.
         </motion.p>
 
         <motion.div
