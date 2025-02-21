@@ -42,7 +42,7 @@ const Experience = () => {
         }}
       />
       
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const Experience = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.company}
@@ -66,21 +66,26 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex gap-8 items-start"
+              className="relative text-center"
             >
-              <div className="flex-shrink-0 w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-accent-purple" />
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center">
+                  <Briefcase className="w-6 h-6 text-accent-purple" />
+                </div>
               </div>
               
-              <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-gray-900">{experience.position}</h3>
-                <div className="mt-1 flex items-center gap-2 text-sm text-accent-purple">
-                  <span>{experience.company}</span>
-                  <span>•</span>
-                  <span>{experience.period}</span>
-                </div>
-                <p className="mt-2 text-gray-600">{experience.description}</p>
+              {/* Timeline line */}
+              {index !== experiences.length - 1 && (
+                <div className="absolute left-1/2 top-16 w-0.5 h-24 bg-accent-purple/20 -translate-x-1/2" />
+              )}
+              
+              <h3 className="text-xl font-semibold text-gray-900">{experience.position}</h3>
+              <div className="mt-1 flex items-center justify-center gap-2 text-sm text-accent-purple">
+                <span>{experience.company}</span>
+                <span>•</span>
+                <span>{experience.period}</span>
               </div>
+              <p className="mt-2 text-gray-600 max-w-2xl mx-auto">{experience.description}</p>
             </motion.div>
           ))}
         </div>
