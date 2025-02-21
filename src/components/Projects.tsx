@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 
@@ -14,7 +13,7 @@ const projects = [
   },
   {
     title: "Automated Deployment Pipeline",
-    description: "Built a robust CI/CD pipeline reducing deployment time by 70%, ensures consistent and reliable releases, reducing manual intervention.",
+    description: "Built a robust CI/CD pipeline reducing deployment time, ensures consistent and reliable releases, reducing manual intervention.",
     tech: ["Gitlab", "Docker", "Kubernetes", "Postman"],
     links: {
       github: "#",
@@ -43,8 +42,20 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-4 relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2
+        }}
+      />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

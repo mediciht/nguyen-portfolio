@@ -4,8 +4,21 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-screen flex items-center justify-center px-4 relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.3 // Adjust this value to make background lighter or darker
+        }}
+      />
+      
+      {/* Content with relative positioning to appear above background */}
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +49,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto"
         >
-          Hi, I'm Nguyen, a seasoned Monitoring/DevOps professional committed to optimizing IT system reliability and performance. With expertise in deploying and managing monitoring solutions, automating infrastructure configurations, and developing custom applications, I focus on creating efficient, reliable systems tailored to specific needs.
+          Hi, I'm Nguyen, a Monitoring/DevOps professional committed to optimizing IT system reliability and performance. With expertise in deploying and managing monitoring solutions, automating infrastructure configurations, and developing custom applications, I focus on creating efficient, reliable systems tailored to specific needs.
         </motion.p>
 
         <motion.div
@@ -46,7 +59,7 @@ const Hero = () => {
           className="mt-10 flex items-center justify-center gap-4 flex-wrap"
         >
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/nguyen-tran-620a9a244/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -66,7 +79,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://www.upwork.com/your-profile"
+            href="https://www.upwork.com/nguyen153"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"
@@ -76,7 +89,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:trannguyenptit@gmail.com"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold bg-accent-purple text-white shadow-sm hover:bg-accent-purple/90 transition-colors"
           >
             <Mail className="h-4 w-4" />

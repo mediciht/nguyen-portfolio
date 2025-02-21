@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 
@@ -25,8 +24,20 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-24 px-4 relative">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2
+        }}
+      />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

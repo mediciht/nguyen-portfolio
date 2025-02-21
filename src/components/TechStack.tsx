@@ -64,17 +64,20 @@ const technologies = [
 
 const TechStack = () => {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
-      {/* Background Pattern */}
+    <section className="py-24 px-4 relative">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-accent-light to-white"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, rgba(155, 135, 245, 0.1) 1px, transparent 0)",
-          backgroundSize: "40px 40px"
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2
         }}
       />
       
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

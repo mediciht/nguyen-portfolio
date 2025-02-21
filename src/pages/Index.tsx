@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Hero from "../components/Hero";
 import TechStack from "../components/TechStack";
@@ -15,7 +14,7 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="bg-white">
+    <main>
       <Hero />
       <TechStack />
       <Experience />
