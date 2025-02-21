@@ -10,6 +10,11 @@ import {
   Settings
 } from "lucide-react";
 
+const getImageUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`;
+};
+
 const technologies = [
   { 
     name: "AWS", 
@@ -69,7 +74,7 @@ const TechStack = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/images/background.jpg')",
+          backgroundImage: `url('${getImageUrl('/images/background.jpg')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 
+const getImageUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`;
+};
+
 const projects = [
   {
     title: "Monitoring Solution",
@@ -47,7 +52,7 @@ const Projects = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/images/background.jpg')",
+          backgroundImage: `url('${getImageUrl('/images/background.jpg')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 
+const getImageUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`;
+};
+
 const experiences = [
   {
     company: "Linkbynet/Accenture",
@@ -29,7 +34,7 @@ const Experience = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/images/background.jpg')",
+          backgroundImage: `url('${getImageUrl('/images/background.jpg')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -53,26 +58,28 @@ const Experience = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
+        <div className="space-y-12">
+          {experiences.map((experience, index) => (
             <motion.div
-              key={exp.company}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={experience.company}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="flex gap-8 items-start"
             >
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center">
-                  <Briefcase className="w-6 h-6 text-accent-purple" />
-                </div>
+              <div className="flex-shrink-0 w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center">
+                <Briefcase className="w-6 h-6 text-accent-purple" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900">{exp.position}</h3>
-                <p className="text-accent-purple mt-1">{exp.company}</p>
-                <p className="text-sm text-gray-500 mt-1">{exp.period}</p>
-                <p className="mt-3 text-gray-600">{exp.description}</p>
+              
+              <div className="flex-grow">
+                <h3 className="text-xl font-semibold text-gray-900">{experience.position}</h3>
+                <div className="mt-1 flex items-center gap-2 text-sm text-accent-purple">
+                  <span>{experience.company}</span>
+                  <span>•</span>
+                  <span>{experience.period}</span>
+                </div>
+                <p className="mt-2 text-gray-600">{experience.description}</p>
               </div>
             </motion.div>
           ))}

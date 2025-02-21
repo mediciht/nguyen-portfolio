@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
+const getImageUrl = (path: string) => {
+  const base = import.meta.env.BASE_URL;
+  return `${base}${path.startsWith('/') ? path.slice(1) : path}`;
+};
+
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative">
@@ -9,7 +14,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/images/background.jpg')",
+          backgroundImage: `url('${getImageUrl('/images/background.jpg')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -26,7 +31,7 @@ const Hero = () => {
           className="flex flex-col items-center gap-4"
         >
           <Avatar className="h-24 w-24">
-            <AvatarImage src="/images/avatar.jpg" alt="Your Name" />
+            <AvatarImage src={getImageUrl('/images/avatar.jpg')} alt="Your Name" />
             <AvatarFallback>YN</AvatarFallback>
           </Avatar>
           <span className="px-3 py-1 text-sm font-medium bg-accent-purple/10 text-accent-purple rounded-full">
