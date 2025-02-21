@@ -14,17 +14,26 @@ const projects = [
   },
   {
     title: "Automated Deployment Pipeline",
-    description: "Built a robust CI/CD pipeline reducing deployment time by 70%.",
-    tech: ["Jenkins", "Kubernetes", "Ansible"],
+    description: "Built a robust CI/CD pipeline reducing deployment time by 70%, ensures consistent and reliable releases, reducing manual intervention.",
+    tech: ["Gitlab", "Docker", "Kubernetes", "Postman"],
     links: {
       github: "#",
       live: "#",
     },
   },
   {
-    title: "Cloud Migration Framework",
-    description: "Developed a framework for seamless migration of legacy applications to cloud infrastructure.",
-    tech: ["AWS", "Terraform", "Docker"],
+    title: "Event-Driven Application",
+    description: "Design and build an event-driven app to handle massive monitoring events, with the capability to integrate with multiple event sources and custom logic for event handling.",
+    tech: ["Python Flask", "RabbitMQ", "MongoDB", "Docker", "Redis"],
+    links: {
+      github: "#",
+      live: "#",
+    },
+  },
+  {
+    title: "Splunk App Deployment",
+    description: "Manage Splunk clusters with Ansible, develop Splunk apps, audit the Splunk platform, and create custom dashboards and reports.",
+    tech: ["Splunk", "Ansible", "Python"],
     links: {
       github: "#",
       live: "#",
@@ -51,7 +60,7 @@ const Projects = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
