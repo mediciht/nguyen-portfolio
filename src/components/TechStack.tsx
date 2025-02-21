@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { 
   Cloud, 
@@ -8,10 +7,7 @@ import {
   Database,
   LineChart,
   FileCode,
-  Settings,
-  Server,
-  MessageCircle,
-  Function
+  Settings
 } from "lucide-react";
 
 const technologies = [
