@@ -7,7 +7,8 @@ import {
   FileCode, 
   Wrench, 
   FileText, 
-  TestTube 
+  TestTube,
+  Mail
 } from "lucide-react";
 
 const getImageUrl = (path: string) => {
@@ -55,6 +56,11 @@ const services = [
     icon: TestTube,
     title: "Testing",
     description: "Create test scenarios for your web or API applications using Selenium, Postman, and Newman."
+  },
+  {
+    icon: Mail,
+    title: "Want to Know More?",
+    description: "Have a specific requirement or need more details? Contact me directly to discuss how I can help with your project."
   }
 ];
 
@@ -110,20 +116,44 @@ const HowCanIHelp = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-sm max-w-3xl mx-auto text-center"
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Work with Me?</h3>
-          <p className="text-gray-600">
-            When you work with me, the solutions I deliver are reusable and thoroughly documented. 
-            I believe my contributions will help you enhance your current platform and applications, 
-            ensuring long-term efficiency and maintainability.
-          </p>
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Why Work with Me panel */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Work with Me?</h3>
+            <p className="text-gray-600">
+              When you work with me, the solutions I deliver are reusable and thoroughly documented. 
+              I believe my contributions will help you enhance your current platform and applications, 
+              ensuring long-term efficiency and maintainability.
+            </p>
+          </motion.div>
+
+          {/* Contact Me panel */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Me</h3>
+            <p className="text-gray-600 mb-6">
+              I'm happy to discuss how I can help with your project.
+            </p>
+            <a
+              href="mailto:trannguyenptit@gmail.com"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-accent-purple text-white rounded-lg hover:bg-accent-purple/90 transition-colors"
+            >
+              <Mail className="w-5 h-5" />
+              Contact Me Directly
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

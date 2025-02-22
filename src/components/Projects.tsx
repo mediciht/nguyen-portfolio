@@ -83,20 +83,6 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="mt-6 flex gap-4">
-                <a
-                  href={project.links.github}
-                  className="text-gray-600 hover:text-accent-purple transition-colors"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-                <a
-                  href={project.links.live}
-                  className="text-gray-600 hover:text-accent-purple transition-colors"
-                >
-                  <ExternalLink className="h-5 w-5" />
-                </a>
-              </div>
             </motion.div>
           ))}
         </div>
