@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import TechStack from "../components/TechStack";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
+import Certificates from "../components/Certificates";
+import HowCanIHelp from "@/components/HowCanIHelp";
 
 const Index = () => {
   useEffect(() => {
@@ -19,6 +21,8 @@ const Index = () => {
       <TechStack />
       <Experience />
       <Projects />
+      <HowCanIHelp />
+      <Certificates />
     </main>
   );
 };

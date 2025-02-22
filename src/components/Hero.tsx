@@ -84,7 +84,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://www.upwork.com/nguyen153"
+            href="https://www.upwork.com/freelancers/~01f36c94eefd258e7f?mp_source=share"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-gray-900 border border-gray-200 hover:bg-gray-50 transition-colors"

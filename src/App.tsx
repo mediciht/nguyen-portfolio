@@ -1,10 +1,10 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Index from './pages/Index';
 import './App.css';
 
 function App() {
   return (
-    <Router basename="/nguyen-portfolio">
+    <Router>
       <Index />
     </Router>
   );
