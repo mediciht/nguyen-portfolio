@@ -10,38 +10,23 @@ const projects = [
   {
     title: "Monitoring Solution",
     description: "Deploy and Maintain monitoring service for large infra, cover IaaS, PaaS and SaaS.",
-    tech: ["Zabbix", "Datadog", "Grafana", "Terraform"],
-    links: {
-      github: "#",
-      live: "#",
-    },
+    tech: ["Zabbix", "Datadog", "Grafana", "Terraform", "linux"],
+
   },
   {
     title: "Automated Deployment Pipeline",
     description: "Built a robust CI/CD pipeline reducing deployment time, ensures consistent and reliable releases, reducing manual intervention.",
-    tech: ["Gitlab", "Docker", "Kubernetes", "Postman"],
-    links: {
-      github: "#",
-      live: "#",
-    },
+    tech: ["Gitlab", "Docker", "Kubernetes", "Postman", "yml"],
   },
   {
     title: "Event-Driven Application",
     description: "Design and build an event-driven app to handle massive monitoring events, with the capability to integrate with multiple event sources and custom logic for event handling.",
     tech: ["Python Flask", "RabbitMQ", "MongoDB", "Docker", "Redis"],
-    links: {
-      github: "#",
-      live: "#",
-    },
   },
   {
     title: "Splunk App Deployment",
     description: "Manage Splunk clusters with Ansible, develop Splunk apps, audit the Splunk platform, and create custom dashboards and reports.",
-    tech: ["Splunk", "Ansible", "Python"],
-    links: {
-      github: "#",
-      live: "#",
-    },
+    tech: ["Splunk", "Ansible", "Python", "linux"],
   },
 ];
 
