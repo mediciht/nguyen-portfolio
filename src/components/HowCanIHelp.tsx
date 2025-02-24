@@ -25,7 +25,7 @@ const services = [
   {
     icon: Cloud,
     title: "Multi-Platform Deployment",
-    description: "Deploy your application on multiple platforms, including on-premises, AWS, and Azure."
+    description: "Deploy your application on multiple platforms, including on-premises and cloud platforms like AWS."
   },
   {
     icon: Workflow,
